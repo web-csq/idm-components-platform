@@ -26,10 +26,14 @@ export default {
     },
 
     // Global CSS: https://go.nuxtjs.dev/config-css
-    css: ['ant-design-vue/dist/antd.css', '~/assets/css/normalize.css'],
+    css: ['ant-design-vue/dist/antd.css', '~/assets/css/normalize.css', '~/assets/css/common.css'],
 
     // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-    plugins: ['@/plugins/antd-ui', { src: '@/plugins/axios', ssr: false }],
+    plugins: [
+        '@/plugins/antd-ui',
+        '@/plugins/icon',
+        { src: '@/plugins/axios', ssr: false },
+    ],
 
     // Auto import components: https://go.nuxtjs.dev/config-components
     components: true,
@@ -37,7 +41,7 @@ export default {
     // middleware
     middleware: [],
 
-    //Router config
+    // Router config
     router: {},
 
     // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
@@ -61,7 +65,7 @@ export default {
 
     axios: {
         proxy: true,
-        prefix: '/api'
+        prefix: '/api',
     },
     proxy: {
         '/api': {
@@ -91,15 +95,15 @@ export default {
     // Build Configuration: https://go.nuxtjs.dev/config-build
     build: {
         transpile: [/^element-ui/],
-        postcss: {
-            plugins: {
-                tailwindcss: path.join(__dirname, 'tailwind.config.js'),
-                'postcss-pxtorem': {
-                    propList: ['*', '!border*'],
-                },
-            },
-            preset: { autoprefixer: true },
-        },
+        // postcss: {
+        //     plugins: {
+        //         tailwindcss: path.join(__dirname, 'tailwind.config.js'),
+        //         'postcss-pxtorem': {
+        //             propList: ['*', '!border*'],
+        //         },
+        //     },
+        //     preset: { autoprefixer: true },
+        // },
         babel: {
             plugins: [
                 [
@@ -111,6 +115,22 @@ export default {
                     },
                 ],
             ],
+        },
+        extend(config, ctx) {
+            const svgRule = config.module.rules.find((rule) =>
+                rule.test.test('.svg')
+            )
+            svgRule.exclude = [path.resolve(__dirname, 'assets/icons')]
+
+            // Includes /assets/icons/svg for svg-sprite-loader
+            config.module.rules.push({
+                test: /\.svg$/,
+                include: [path.resolve(__dirname, 'assets/icons')],
+                loader: 'svg-sprite-loader',
+                options: {
+                    symbolId: 'icon-[name]',
+                },
+            })
         },
     },
 }

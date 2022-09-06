@@ -1,12 +1,12 @@
 <template>
     <div style="background-color: #f4f4f4; min-height: 100vh">
         <top-bar></top-bar>
-        <nuxt />
+        <Nuxt />
     </div>
 </template>
 
 <script>
-export default {}
+export default {
+    name: 'FullPage'
+}
 </script>
-
-<style></style>

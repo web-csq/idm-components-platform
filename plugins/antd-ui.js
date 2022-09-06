@@ -1,6 +1,5 @@
 import Vue from 'vue'
-import { Button } from 'ant-design-vue'
-import { message } from 'ant-design-vue'
+import { Button, message } from 'ant-design-vue'
 message.config({
     top: '100px',
     duration: 2,

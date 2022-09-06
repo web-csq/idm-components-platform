@@ -9,6 +9,7 @@
 
 <script>
 export default {
+    name: 'ErrorPage',
     props: {
         error: {
             type: Object,
@@ -83,7 +84,6 @@ export default {
     padding: 14px 24px;
     font-size: 18px;
     color: #fff;
-    background-color: $theme;
     border-radius: 5px;
 }
 </style>
