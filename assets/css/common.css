@@ -33,6 +33,17 @@
     white-space: nowrap;
 }
 
+.text-o-e-1 {
+    width: 100%;
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
 .text-o-e-2 {
     width: 100%;
     text-overflow: -o-ellipsis-lastline;
@@ -42,4 +53,10 @@
     -webkit-line-clamp: 2;
     line-clamp: 2;
     -webkit-box-orient: vertical;
+}
+
+/** cursor */
+
+.cursor-p {
+    cursor: pointer;
 }

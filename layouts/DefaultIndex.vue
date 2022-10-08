@@ -12,7 +12,7 @@ export default {}
 
 <style lang="scss" scoped>
 .idm-default-index-layout {
-    background-color: #fff;
     min-height: 100vh;
+    background-color: rgb(247, 247, 250);
 }
 </style>

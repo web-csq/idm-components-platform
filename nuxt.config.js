@@ -1,4 +1,5 @@
 import path from 'path'
+import { router } from './router'
 export default {
     server: {
         port: 9527,
@@ -26,7 +27,11 @@ export default {
     },
 
     // Global CSS: https://go.nuxtjs.dev/config-css
-    css: ['ant-design-vue/dist/antd.css', '~/assets/css/normalize.css', '~/assets/css/common.css'],
+    css: [
+        'ant-design-vue/dist/antd.css',
+        '~/assets/css/normalize.css',
+        '~/assets/css/common.css',
+    ],
 
     // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
     plugins: [
@@ -42,7 +47,7 @@ export default {
     middleware: [],
 
     // Router config
-    router: {},
+    router,
 
     // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
     buildModules: [
