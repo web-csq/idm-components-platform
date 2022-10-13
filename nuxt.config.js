@@ -6,7 +6,7 @@ export default {
     },
     // Global page headers: https://go.nuxtjs.dev/config-head
     head: {
-        title: 'idm-components-playform',
+        title: 'IDM组件共享平台',
         meta: [
             { charset: 'utf-8' },
             { name: 'referrer', content: 'never' },
