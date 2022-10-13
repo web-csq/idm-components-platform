@@ -62,6 +62,7 @@ import IComponentMarket from '@/components/ListBox/IComponentMarket'
 import IYunQuan from '@/components/ListBox/IYunQuan'
 import IHotTalk from '@/components/ListBox/IHotTalk'
 import ISchool from '@/components/ListBox/ISchool'
+import { getPageTitle } from '@/utils/common'
 export default {
     name: 'IndexPage',
     components: {
@@ -85,7 +86,7 @@ export default {
     },
     head() {
         return {
-            title: '首页',
+            title: getPageTitle('首页'),
         }
     },
     mounted() {

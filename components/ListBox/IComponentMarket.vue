@@ -92,9 +92,10 @@ export default {
         line-height: 25px;
         box-sizing: border-box;
         transition: height 0.2s;
-        background: linear-gradient(180deg,
-                rgba(255, 255, 255, 0.4),
-                rgba(150, 150, 150, 0.3));
+        // background: linear-gradient(180deg,
+        //         rgba(255, 255, 255, 0.4),
+        //         rgba(150, 150, 150, 0.3));
+        background: rgba($color: #000000, $alpha: 0.3);
     }
 
     .idm-component-market-top-image {
