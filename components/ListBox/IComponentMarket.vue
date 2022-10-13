@@ -63,7 +63,8 @@ export default {
 
     .idm-component-market-top {
         position: relative;
-        border-radius: 5px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
         overflow: hidden;
     }
 
@@ -72,7 +73,7 @@ export default {
         top: 6px;
         right: 6px;
         border-radius: 10px;
-        background: #ccc;
+        background: rgba($color: #000000, $alpha: 0.3);
         color: #fff;
         font-size: 12px;
         padding: 2px 10px;
@@ -98,7 +99,7 @@ export default {
 
     .idm-component-market-top-image {
         width: 100%;
-        border-radius: 5px;
+        border-radius: 0;
     }
 
     &:hover {

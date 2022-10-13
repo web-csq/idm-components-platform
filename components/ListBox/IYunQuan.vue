@@ -1,7 +1,10 @@
 <template>
     <div class="idm-yuanquan-box">
-        <div class="yuanquan-title text-o-e-2">
-            <span class="talk-hash">#{{ componentData.hash }}#</span>{{ componentData.title }}
+        <div class="yuanquan-title">
+            <span class="text-o-e-2 cursor-p">
+                <span class="talk-hash">#{{ componentData.hash }}#</span>
+                {{ componentData.title }}
+            </span>
         </div>
         <a-row v-if="componentData.images && componentData.images.length > 0" :gutter="[16, 16]">
             <a-col v-for="(item, index) in componentData.images" :key="index" :span="12">

@@ -16,19 +16,10 @@ export default {
             default: null,
         },
     },
-    computed: {
-        statusCode() {
-            return (this.error && this.error.statusCode) || 500
-        },
-        message() {
-            return this.error.message || 'Error'
-        },
-    },
     head() {
         return {
-            title: `${
-                this.statusCode === 404 ? '找不到页面' : '呈现页面出错'
-            } - 掘金`,
+            title: `${this.statusCode === 404 ? '找不到页面' : '呈现页面出错'
+                } - IDM组件平台`,
             meta: [
                 {
                     name: 'viewport',
@@ -38,6 +29,14 @@ export default {
             ],
         }
     },
+    computed: {
+        statusCode() {
+            return (this.error && this.error.statusCode) || 500
+        },
+        message() {
+            return this.error.message || 'Error'
+        },
+    }
 }
 </script>
 

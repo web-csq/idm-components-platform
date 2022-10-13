@@ -26,7 +26,7 @@
                 <ICommonBoxContainer class="margin-bottom-16" :component-data="listConfig.iSchool">
                     <template #list>
                         <a-row :gutter="[16, 16]">
-                            <a-col v-for="item in 6" :key="item" :span="6">
+                            <a-col v-for="item in 8" :key="item" :span="6">
                                 <ISchool></ISchool>
                             </a-col>
                         </a-row>
@@ -36,7 +36,7 @@
                 <ICommonBoxContainer class="margin-bottom-16" :component-data="listConfig.hotTalk">
                     <template #list>
                         <a-row :gutter="[16, 16]">
-                            <a-col v-for="item in 6" :key="item" :span="8">
+                            <a-col v-for="item in 3" :key="item" :span="8">
                                 <IHotTalk></IHotTalk>
                             </a-col>
                         </a-row>
@@ -46,7 +46,7 @@
             <a-col :span="6">
                 <ICommonBoxContainer :component-data="listConfig.yunQuan">
                     <template #list>
-                        <IYunQuan v-for="item in 10" :key="item"></IYunQuan>
+                        <IYunQuan v-for="item in 6" :key="item"></IYunQuan>
                     </template>
                 </ICommonBoxContainer>
             </a-col>
